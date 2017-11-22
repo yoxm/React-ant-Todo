@@ -1,6 +1,5 @@
 import React from "react";
 import TodoItem from "./TodoItem"
-import notification from "antd";
 
 class TodoMain extends React.Component{
     // 遍历显示任务，转发props

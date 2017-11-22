@@ -34,7 +34,7 @@ class TodoItem extends React.Component{
             >
                 <Checkbox checked={this.props.isDone} onChange={this.handlerChange.bind(this)}/>
                     <span style={doneStyle}>{this.props.text}</span>
-                <Button style={{'display': 'none'}} ref="deleteBtn" onClick={this.handlerDelete.bind(this)}  className="fr">删除</Button>
+                <Button style={{'display': 'none'}} ref="deleteBtn" size='small' onClick={this.handlerDelete.bind(this)}  className="fr">删除</Button>
             </li>
         )
     }
