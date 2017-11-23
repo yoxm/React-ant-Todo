@@ -25,6 +25,7 @@
         "css-loader": "^0.14.5",
         "eslint-config-airbnb": "^16.1.0",
         "eslint-plugin-compat": "^2.1.0",
+        "eslint-plugin-jsx-a11y": "^6.0.2",
         "file-loader": "^0.8.4",
         "jsx-loader": "^0.13.2",
         "node-libs-browser": "^0.5.2",
