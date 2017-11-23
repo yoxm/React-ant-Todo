@@ -9,7 +9,7 @@ class TodoMain extends React.Component {
         {this.props.todos.map((todo, index) => {
           return (
             <TodoItem
-              key={index}
+              key={todo.key}
               {...todo}
               index={index}
               {...this.props}
