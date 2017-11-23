@@ -43,8 +43,8 @@ class Todo extends React.Component {
       });
     } else {
       this.setState({
-        todos: this.state.todos.map((todo) => {
-          todo.isDone = isDone;
+        todos: this.state.todos.map((todo) => { 
+          todo.isDone = isDone; 
           return todo;
         }),
       });

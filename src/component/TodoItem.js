@@ -1,6 +1,5 @@
-/* eslint-disable */
+// /* eslint-disable */
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Checkbox, Button } from 'antd';
 
 class TodoItem extends React.Component {
@@ -8,16 +7,20 @@ class TodoItem extends React.Component {
   handlerChange() {
     const isDone = !this.props.isDone;
     this.props.changeTodoState(this.props.index, isDone);
+    this.handlerMouseOut = this.handlerMouseOut.bind(this);
+    this.handlerMouseOut = this.handlerMouseOut.bind(this);
+    this.handlerChange = this.handlerChange.bind(this);
+    this.handlerDelete = this.handlerChange.bind(this);
   }
 
   // 鼠标移入
   handlerMouseOver() {
-    ReactDOM.findDOMNode(this.refs.deleteBtn).style.display = 'inline';
+    this.deleteBtn.style.display = 'inline';
   }
 
   // 鼠标移出
   handlerMouseOut() {
-    ReactDOM.findDOMNode(this.refs.deleteBtn).style.display = 'none';
+    this.deleteBtn.getDOMNode().style.display = 'none';
   }
 
   // 删除当前任务
@@ -30,17 +33,16 @@ class TodoItem extends React.Component {
 
     return (
       <li
-        onMouseOver={this.handlerMouseOver.bind(this)}
-        onMouseOut={this.handlerMouseOut.bind(this)}
+        onMouseOver={this.handlerMouseOver}
+        onMouseOut={this.handlerMouseOut}
       >
-        <Checkbox checked={this.props.isDone} onChange={this.handlerChange.bind(this)} />
+        <Checkbox checked={this.props.isDone} onChange={this.handlerChange} />
         <span style={doneStyle}>{this.props.text}</span>
         <Button
           style={{ display: 'none' }}
-          ref={"deleteBtn"}
+          ref={(button) => { this.deleteBtn = button; }}
           size="small"
           onClick={this.handlerDelete.bind(this)}
-          className="fr"
         >
           删除
         </Button>

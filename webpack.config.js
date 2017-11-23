@@ -1,3 +1,4 @@
+/* eslint:disabled*/
 module.exports = {
 	entry: [
 		"./src/index.js"
