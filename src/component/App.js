@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import '../style/App.css';
 import Todo from './Todo';
-import Tab from "./Tab/Tab";
-import QrCode from './QrCode'
-import Test from './Test/TestMuCheck'
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 class App extends Component {
   render() {
-        /*return (
+        return (
           <Layout>
             <Header className="header">
               <div className="logo" />
@@ -62,16 +59,13 @@ class App extends Component {
                 </Breadcrumb>
                 <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
                   <Todo />
+
                 </Content>
               </Layout>
             </Layout>
           </Layout>
         );
-      }*/
-      return (
-        <Test/>
-      )
-  }
+      }
 }
 
 export default App;

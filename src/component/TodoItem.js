@@ -15,12 +15,13 @@ class TodoItem extends React.Component {
 
   // 鼠标移入
   handlerMouseOver() {
+    console.log(this.deleteBtn);
     this.deleteBtn.style.display = 'inline';
   }
 
   // 鼠标移出
   handlerMouseOut() {
-    this.deleteBtn.getDOMNode().style.display = 'none';
+    this.deleteBtn.style.display = 'none';
   }
 
   // 删除当前任务
@@ -40,7 +41,7 @@ class TodoItem extends React.Component {
         <span style={doneStyle}>{this.props.text}</span>
         <Button
           style={{ display: 'none' }}
-          ref={(button) => { this.deleteBtn = button; }}
+          ref={ button => { this.deleteBtn = button; } }
           size="small"
           onClick={this.handlerDelete.bind(this)}
         >
